@@ -27,6 +27,7 @@ const AdminLogin = ()=>{
             console.log(response.data);
             toast.success(response.data.msg)
             localStorage.setItem("email", response.data.Admin.email);
+            navigate("/admin")
 
         } catch (error) {
             toast.error(error.response.data.msg);

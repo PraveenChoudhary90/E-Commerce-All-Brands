@@ -8,4 +8,4 @@ function Admindashboard() {
   )
 }
 
-export default Admindashboard
+export default Admindashboard;

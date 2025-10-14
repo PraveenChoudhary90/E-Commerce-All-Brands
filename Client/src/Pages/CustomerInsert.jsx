@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import BASE_URL from '../Config/Config';
+import axios from "axios"
+import {message } from 'antd';
+import { ToastContainer, toast } from 'react-toastify';
 
 const EmpInert = ()=>{
     const [input, setInput] = useState("");
@@ -19,6 +22,8 @@ const EmpInert = ()=>{
         try {
             const response  = await axios.post(api, input);
             console.log(response.data);
+            toast.success(response.data.msg)
+
         } catch (error) {
             console.log(error);
         }
@@ -45,7 +50,7 @@ const EmpInert = ()=>{
         <Form.Control type="text" placeholder="Enter Number"  name='number' value={input.number} onChange={handelInput} />
       </Form.Group>      
 
-      <Form.Group className="mb-3" controlId="formBasicEdmail">
+      <Form.Group className="mb-3" controlId="formBasicEdmakil">
         <Form.Label>Enter Address</Form.Label>
         <Form.Control type="text" placeholder="Enter Address"  name='address' value={input.address} onChange={handelInput} />
       </Form.Group>      
@@ -59,6 +64,7 @@ const EmpInert = ()=>{
       </Button>
     </Form>
     </div>
+     <ToastContainer />
         </>
     )
 }

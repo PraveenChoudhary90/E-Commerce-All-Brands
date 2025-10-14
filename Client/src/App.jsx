@@ -4,7 +4,11 @@ import './App.css'
 import Layout from './Layout'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import EmpInert from './Pages/EmpInsert'
+import EmpInert from './Pages/CustomerInsert'
+import AdminLogin from './Pages/AdminLogin'
+import CustomerLogin from './Pages/CustomerLogin'
+import Admindashboard from './Admin/Admindashboard'
+import Addtocart from './Admin/Addtocart'
 
 function App() {
 
@@ -17,7 +21,14 @@ function App() {
       <Route path='home' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='insert' element={<EmpInert/>}/>
+      <Route path='customerlogin' element={<CustomerLogin/>}/>
+      <Route path='adminlogin' element={<AdminLogin/>}/>
       </Route>
+    </Routes>
+    <Routes>
+    <Route path='admin' element={<Admindashboard/>}>
+    <Route path='addtocart' element={<Addtocart/>}/>
+    </Route>
     </Routes>
     </BrowserRouter>
     </>

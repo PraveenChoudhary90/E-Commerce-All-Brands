@@ -11,7 +11,7 @@ const TopNav = ()=>{
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand as={Link} to="home">Company</Navbar.Brand>
+        <Navbar.Brand as={Link} to="home">Brands</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -34,10 +34,10 @@ const TopNav = ()=>{
             <Nav.Link as={Link} to="insert">
               Sign Up
             </Nav.Link>
-             <Nav.Link as={Link} to="insert">
+             <Nav.Link as={Link} to="customerlogin">
               Login
             </Nav.Link>
-             <Nav.Link as={Link} to="insert">
+             <Nav.Link as={Link} to="adminlogin">
               Admin
             </Nav.Link>
           </Nav>

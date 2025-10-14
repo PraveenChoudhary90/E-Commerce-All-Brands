@@ -8,7 +8,7 @@ import EmpInert from './Pages/CustomerInsert'
 import AdminLogin from './Pages/AdminLogin'
 import CustomerLogin from './Pages/CustomerLogin'
 import Admindashboard from './Admin/Admindashboard'
-import Addtocart from './Admin/AddProduct'
+import AddProduct from './Admin/AddProduct'
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
     </Routes>
     <Routes>
     <Route path='admin' element={<Admindashboard/>}>
-    <Route path='addtocart' element={<Addtocart/>}/>
+    <Route path='addproduct' element={<AddProduct/>}/>
     </Route>
     </Routes>
     </BrowserRouter>

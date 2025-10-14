@@ -4,19 +4,19 @@ const Home = ()=>{
         <>
          <Carousel>
       <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
+      <img src="v4.jpg" alt="first view" id='pic'/>
         <Carousel.Caption>
           <h3>First slide label</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
+        <img src="v2.jpg" alt="Second view" id='pic' />
         <Carousel.Caption>
           <h3>Second slide label</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
+       <img src="v3.jpg" alt="Third view" id='pic' />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           

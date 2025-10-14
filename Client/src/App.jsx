@@ -8,7 +8,7 @@ import EmpInert from './Pages/CustomerInsert'
 import AdminLogin from './Pages/AdminLogin'
 import CustomerLogin from './Pages/CustomerLogin'
 import Admindashboard from './Admin/Admindashboard'
-import Addtocart from './Admin/Addtocart'
+import Addtocart from './Admin/AddProduct'
 
 function App() {
 

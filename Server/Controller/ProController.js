@@ -1,4 +1,5 @@
 const AdminModel = require("../Model/AdminModel");
+const ProductModel = require("../Model/ProductModel");
 const ProModel = require("../Model/ProModel");
 
 
@@ -70,7 +71,17 @@ const GetAdmin = async(req,res)=>{
     const {name, brand, color, description, price}= req.body;
     const ImageUrl = req.files.map(file=>file.path);
     try {
-        
+        const Product = await ProductModel.create({
+            name:name,
+            brand:brand,
+            color:color,
+            description:description,
+            price:price,
+            defaultImage:ImageUrl[0],
+            image:ImageUrl
+        })
+        // console.log(Product);
+        res.status(200).send({msg:"Product Created Successfully"})
     } catch (error) {
         console.log(error);
     }

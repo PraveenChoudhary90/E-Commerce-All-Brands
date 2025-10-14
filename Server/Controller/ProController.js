@@ -67,9 +67,13 @@ const GetAdmin = async(req,res)=>{
 }
 
    const InsertProduct  = async(req,res)=>{
-    console.log(req.body);
-    console.log(req.files);
-    res.send("okk");
+    const {name, brand, color, description, price}= req.body;
+    const ImageUrl = req.files.map(file=>file.path);
+    try {
+        
+    } catch (error) {
+        console.log(error);
+    }
    }
 
 module.exports = {

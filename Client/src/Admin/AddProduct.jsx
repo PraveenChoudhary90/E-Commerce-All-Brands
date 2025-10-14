@@ -72,7 +72,12 @@ function AddProduct() {
       <Form.Group className="mb-3" controlId="formBasicEdmakil">
         <Form.Label>Enter Product Description</Form.Label>
         <Form.Control type="text" placeholder="Enter Description"  name='description' value={input.description} onChange={handelInput} />
-      </Form.Group>      
+      </Form.Group> 
+
+      <Form.Group className="mb-3" controlId="formBasicEdmakil">
+        <Form.Label>Enter Product Price</Form.Label>
+        <Form.Control type="text" placeholder="Enter Price"  name='price' value={input.price} onChange={handelInput} />
+      </Form.Group>     
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Product Image Url</Form.Label>

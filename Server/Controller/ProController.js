@@ -1,3 +1,4 @@
+const AdminModel = require("../Model/AdminModel");
 const ProModel = require("../Model/ProModel");
 
 
@@ -44,7 +45,29 @@ const GetCustomer = async(req,res)=>{
 }
 
 
+const GetAdmin = async(req,res)=>{
+   const {email, password} = req.body;
+   try {
+    const Admin = await AdminModel.findOne({email:email});
+
+
+    if(!Admin){
+        res.status(400).send({msg:"Invalid Email!!!!!!!!!!"})
+    }
+
+
+    if(Admin.password!=password){
+        res.status(400).send({msg:"Invalid Password!!!!!!!!!!!"})
+    }
+
+    res.status(200).send({msg:"You are login", Admin:Admin});
+   } catch (error) {
+    console.log(error)
+   }
+}
+
 module.exports = {
     InsertData,
-    GetCustomer
+    GetCustomer,
+    GetAdmin
 }

@@ -22,7 +22,29 @@ const InsertData = async(req,res)=>{
     }
 }
 
+const GetCustomer = async(req,res)=>{
+   const {email, password} = req.body;
+   try {
+    const Customer = await ProModel.findOne({email:email});
+
+
+    if(!Customer){
+        res.status(400).send({msg:"Invalid Email!!!!!!!!!!"})
+    }
+
+
+    if(Customer.password!=password){
+        res.status(400).send({msg:"Invalid Password!!!!!!!!!!!"})
+    }
+
+    res.status(200).send({msg:"You are login", Customer:Customer});
+   } catch (error) {
+    console.log(error)
+   }
+}
+
 
 module.exports = {
-    InsertData
+    InsertData,
+    GetCustomer
 }

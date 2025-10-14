@@ -19,8 +19,6 @@ mongoose.connect(process.env.CONNECTION_STRING).then(()=>{
     console.log("DB IS CONNECTED")
 })
 
-
-
 app.use("/product", ProRoute )
 
 const port = process.env.PORT;

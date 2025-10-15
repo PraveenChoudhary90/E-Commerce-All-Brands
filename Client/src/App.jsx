@@ -11,6 +11,8 @@ import Admindashboard from './Admin/Admindashboard'
 import AddProduct from './Admin/AddProduct'
 import CartData from './Pages/CartData'
 import Checkout from './Pages/Checkout'
+import Success from './Success'
+import Cancel from './Cancel'
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
       <Route path='adminlogin' element={<AdminLogin/>}/>
       <Route path='cartdata' element={<CartData/>}/>
       <Route path="checkout" element={<Checkout/>}/>
+      <Route path="success" element={<Success/>}/>
+      <Route path='cancel' element={<Cancel/>}/>
       </Route>
     </Routes>
     <Routes>

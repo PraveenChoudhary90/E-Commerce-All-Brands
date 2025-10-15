@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 import { Decrement, DeleteItem, Increment } from "../CartSlice";
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
-const CartData = ()=>{
+const Checkout = ()=>{
     const Product = useSelector(state=>state.mycart.cart);
     console.log(Product);
   const dispatch = useDispatch();
@@ -27,16 +27,9 @@ const CartData = ()=>{
                 <td>{key.name}</td>
                 <td>{key.brand}</td>
                 <td>{key.color}</td>
-                <td>{key.description}</td>
                 <td>{key.price}</td>
-                <td>
-
-                   <FaMinus style={{marginRight:"10px", fontSize:"16px"}} onClick={()=>{dispatch(Decrement({id:key.id}))}} />
-                    {key.qty}
-                    <FaPlusSquare style={{marginLeft:"10px", fontSize:"16px"}} onClick={()=>{dispatch(Increment({id:key.id}))}} />
-                    </td>
+                <td>{key.qty}</td>
                 <td>{key.qty*key.price}</td>
-                <td><MdDelete  onClick={()=>{dispatch(DeleteItem({id:key.id}))}}/></td>
             </tr>
             </>
         )
@@ -54,11 +47,9 @@ const CartData = ()=>{
           <th>Name</th>
           <th>Brand</th>
           <th>Color</th>
-          <th>Description</th>
           <th>Price</th>
           <th>Quantity</th>
           <th>Total</th>
-          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -66,9 +57,9 @@ const CartData = ()=>{
         </tbody>
         </Table>
 
-       <Button variant="primary" onClick={()=>{navigate("/checkout")}}>Checkout</Button>
+       <Button variant="primary" >pay now!!</Button>
         </>
     )
 }
 
-export default CartData;
+export default Checkout;

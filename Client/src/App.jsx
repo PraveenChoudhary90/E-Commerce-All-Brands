@@ -10,6 +10,7 @@ import CustomerLogin from './Pages/CustomerLogin'
 import Admindashboard from './Admin/Admindashboard'
 import AddProduct from './Admin/AddProduct'
 import CartData from './Pages/CartData'
+import Checkout from './Pages/Checkout'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='customerlogin' element={<CustomerLogin/>}/>
       <Route path='adminlogin' element={<AdminLogin/>}/>
       <Route path='cartdata' element={<CartData/>}/>
+      <Route path="checkout" element={<Checkout/>}/>
       </Route>
     </Routes>
     <Routes>

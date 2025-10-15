@@ -9,6 +9,7 @@ import AdminLogin from './Pages/AdminLogin'
 import CustomerLogin from './Pages/CustomerLogin'
 import Admindashboard from './Admin/Admindashboard'
 import AddProduct from './Admin/AddProduct'
+import CartData from './Pages/CartData'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Route path='insert' element={<EmpInert/>}/>
       <Route path='customerlogin' element={<CustomerLogin/>}/>
       <Route path='adminlogin' element={<AdminLogin/>}/>
+      <Route path='cartdata' element={<CartData/>}/>
       </Route>
     </Routes>
     <Routes>

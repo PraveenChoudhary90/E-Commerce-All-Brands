@@ -4,10 +4,12 @@ import BASE_URL from '../Config/Config';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useDispatch } from 'react-redux';
+import { Addtocart } from '../CartSlice';
 
 const Home = ()=>{
-     
     const [mydata, setMydata] = useState([]);
+     const dispatch = useDispatch();
 
     const LoadData = async()=>{
         const api = `${BASE_URL}/product/ProductDisplay`;
@@ -40,7 +42,9 @@ const Home = ()=>{
          <h6>Color:<strong>{key.color}</strong></h6>
          <h6>Price:<strong>{key.price}</strong></h6>
         </Card.Text>
-        <Button variant="warning">Add to Cart</Button>
+        <Button variant="warning" onClick={()=>{dispatch(Addtocart({id:key._id, name:key.name, 
+          brand:key.brand, color:key.color,description:key.description,price:key.price, 
+          defaultImage:key.defaultImage, image:key.image, qty:1}))}}>Add to Cart</Button>
       </Card.Body>
     </Card>
 

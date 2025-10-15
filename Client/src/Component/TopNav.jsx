@@ -4,9 +4,18 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { MdLocalGroceryStore } from "react-icons/md";
 
 const TopNav = ()=>{
+     
+  const Product = useSelector(state=>state.mycart.cart);
+  console.log(Product);
+  const Prolength = Product.length;
+
+  const navigate = useNavigate();
+
     return(
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -41,6 +50,7 @@ const TopNav = ()=>{
               Admin
             </Nav.Link>
           </Nav>
+           <div id="ds" style={{fontSize:"22px", marginRight:"40px"}}> <MdLocalGroceryStore onClick={()=>{navigate("/cartdata")}} />{Prolength}</div>
           <Form className="d-flex">
             <Form.Control
               type="search"

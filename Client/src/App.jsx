@@ -13,6 +13,7 @@ import CartData from './Pages/CartData'
 import Checkout from './Pages/Checkout'
 import Success from './Success'
 import Cancel from './Cancel'
+import Order from './Admin/OrderDetails'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
     <Routes>
     <Route path='admin' element={<Admindashboard/>}>
     <Route path='addproduct' element={<AddProduct/>}/>
+    <Route path='order' element={<Order/>}/>
     </Route>
     </Routes>
     </BrowserRouter>

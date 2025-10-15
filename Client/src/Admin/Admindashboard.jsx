@@ -22,7 +22,7 @@ function Admindashboard() {
           <Navbar.Brand as={Link} to="addproduct">Admin Dashboard</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="addproduct">Add Product</Nav.Link>
-            <Nav.Link  as={Link} to="#">Features</Nav.Link>
+            <Nav.Link  as={Link} to="order">Order Details</Nav.Link>
             <Nav.Link as={Link} to="#">Pricing</Nav.Link>
           </Nav>
             <button onClick={()=>{Logout()}}>Logout</button>

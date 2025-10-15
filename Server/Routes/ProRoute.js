@@ -32,7 +32,7 @@ route.post("/InsertProduct",upload.array("image", 10) ,ProController.InsertProdu
 
 route.get("/ProductDisplay", ProController.ProductDisplay);
 
-
+route.get("/Order", ProController.OrderDetails);
 
 
 

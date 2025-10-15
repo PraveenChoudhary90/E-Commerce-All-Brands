@@ -1,4 +1,5 @@
 const AdminModel = require("../Model/AdminModel");
+const Payment = require("../Model/Payment");
 const ProductModel = require("../Model/ProductModel");
 const ProModel = require("../Model/ProModel");
 
@@ -92,10 +93,17 @@ const GetAdmin = async(req,res)=>{
     res.status(200).send(Product);
    }
 
+  const OrderDetails = async(req,res)=>{
+    const Order = await Payment.find();
+    res.send(Order);
+  }
+
+
 module.exports = {
     InsertData,
     GetCustomer,
     GetAdmin,
     InsertProduct,
-    ProductDisplay
+    ProductDisplay,
+    OrderDetails
 }

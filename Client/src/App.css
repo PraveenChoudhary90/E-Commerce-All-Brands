@@ -103,27 +103,6 @@
   height: 300px;
 }
 
-/* Responsive for tablets and below */
-@media (max-width: 1024px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  #from {
-    width: 80%;
-  }
-
-  #cart {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #cart img {
-    width: 100%;
-    height: auto;
-  }
-}
 
 /* Responsive for small tablets and large phones */
 @media (max-width: 768px) {
@@ -141,7 +120,7 @@
   }
 
   #cart {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   #cart img {
@@ -173,6 +152,11 @@
 
   #from {
     padding: 15px;
+  }
+
+  #cart{
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   #pic {
